@@ -52,8 +52,7 @@
 
 .footer{
     &__content{
-        background: #dfdfdf;
-        // background-color: #dfdfdf;
+        background-color: #dfdfdf;
         padding: 60px 0 80px;
     }
     &__inner{
@@ -243,6 +242,7 @@
         max-width: 485px;
     }
 }
+
 .top{
     &__inner{
         padding-bottom: 70px;
@@ -274,6 +274,7 @@
         margin-left: 25px;
     }
     &__slider-title{
+        @extend %title-font;
         color: $title;
         font-size: 110px;
         line-height: 135px;
@@ -293,5 +294,195 @@
     &__slider-text{
         max-width: 515px;
     }
-    
+}
+
+.new-collection{
+	text-align: center;
+	padding: 45px 0 105px;
+	&__title{
+		@extend %title-font;
+		color: $title;
+		font-size: 36px;
+		line-height: 51px;
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		position: relative;
+		&::after{
+			content: "";
+			position: absolute;
+			width: 250px;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background-color: #6D7278;
+		}
+	}
+	&__text{
+		max-width: 730px;
+		margin: 0 auto 30px;
+	}
+}
+
+.collection{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+	&__item{
+		position: relative;
+		&:hover{
+			.collection__info{
+				opacity: 1;
+			}
+		}
+	}
+	&__images{
+		min-height: 350px;
+		object-fit: cover;
+	}
+	&__info{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(#fff, .7);
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: all .5s;
+	}
+	&__info-title{
+		font-size: 20px;
+		line-height: 25px;
+		color: $title;
+		@extend %title-font;
+		padding-bottom: 19px;
+		margin-bottom: 19px;
+		position: relative;
+		&::after{
+			content: "";
+			position: absolute;
+			height: 1px;
+			background-color: #6d7278;
+			width: 80%;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__info-text{
+		font-weight: 600;
+		font-size: 14px;
+		color: #707070;
+	}
+}
+
+.decore{
+	padding: 170px 0 155px;
+	background-image: url(../images/decor-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 600px;
+	&__title{
+		max-width: 650px;
+		color: $title;
+		@extend %title-font;
+		font-size: 60px;
+		line-height: 80px;
+		padding-bottom: 22px;
+		margin-bottom: 22px;
+		position: relative;
+		&::after{
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 200px;
+			background-color: #6d7278;
+		}
+	}
+	&__text{
+		max-width: 600px;
+	}
+}
+
+.works-path{
+	padding: 80px 0 30px;
+	&__title{
+		@extend %title-font;
+		text-align: center;
+		color: $title;
+		margin-bottom: 40px;
+		font-size: 36px;
+		line-height: 51px;
+	}
+    &__items-box{
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 2px solid rgba($title, .7);
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $title;
+        }
+    }
+    &__item{
+        width: 400px;
+        // width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+    &__item--production{
+        margin-left: 317px;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background-color: rgba($title, .7);
+        }
+    }
+    &__item--production,
+    &__item--consultation{
+        padding-bottom: 38px;
+    }
+    &__item--measurements{
+        padding-top: 38px;
+        margin-left: 360px;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background-color: rgba($title, .7);
+        }
+    }
+    &__item-title{
+        margin-left: 13px;
+        color: $title;
+        @extend %title-font;
+    }
+    &__item-text{
+        margin-top: 13px;
+    }
 }
