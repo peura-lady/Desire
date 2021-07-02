@@ -86,24 +86,6 @@
         margin-bottom: 16px;
         max-width: 475px;
     }
-    &__info-email{
-        font-weight: 600;
-        font-size: 14px;
-        color: $title;
-        margin-bottom: 22px;
-        padding-left: 30px;
-        display: inline-block;
-        position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            background-image: url(../images/envelope.svg);
-            left: 0;
-            top: 8px;
-            width: 16px;
-            height: 12px;
-        }
-    }
     &__form{
         display: flex;
     }
@@ -205,7 +187,7 @@
     width: 100%;
     background-color: #fff;
     padding-top: 40px;
-    z-index: 1;
+    z-index: 6;
     box-shadow: -2px 3px 17px 0px #000;
     transition: all 1s;
     &.rightside-menu--close{
@@ -250,16 +232,20 @@
         }
     }
     &__text{
-        margin-bottom: 75px;
+        margin-bottom: 35px;
     }
     &__images{
         max-width: 485px;
+        height: 425px;
+        margin: 0 auto;
     }
 }
 
 .breadcrumbs{
     background: rgba(#dfdfdf, .5);
     padding: 13px 14px;
+    position: relative;
+    z-index: 5;
     &__list{
         display: flex;
     }
@@ -745,5 +731,133 @@
     }
     &__item{
         margin: 0 auto;
+    }
+}
+
+.map{
+    margin-top: -53px;
+    margin-bottom: 50px;
+}
+
+.contact{
+    padding-bottom: 100px;
+    &__title{
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 200px;
+            background-color: #6d7278;
+        }
+    }
+    .contact__social,
+    .contact__box,
+    .contact__form{
+        padding-left: 284px;
+    }
+    .contact__social{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__social-item + .contact__social-item{
+        padding-left: 40px;
+    }
+    &__text{
+        margin-bottom: 10px;
+    }
+    &__phone{
+        color: $default;
+    }
+    &__city{
+        margin-bottom: 16px;
+    }
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-input{
+            border-radius: 20px;
+            border: 1px solid #dfdfdf;
+            padding: 6px 17px;
+            margin-bottom: 13px;
+            width: 48%;
+            outline: none;
+            &::placeholder{
+                color: #a1a1a1;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                line-height: 27px;
+                font-weight: 400;
+            }
+        }
+        &-area{
+            width: 100%;
+            border-radius: 24px;
+            border: 1px solid #dfdfdf;
+            padding: 14px 17px;
+            min-height: 125px;
+            resize: none;
+            margin-bottom: 20px;
+            &::placeholder{
+                color: #a1a1a1;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                line-height: 27px;
+                font-weight: 400;
+            }
+        }
+        &-btn{
+            border-radius: 21px;
+            border: none;
+            color: #fffff0;
+            background-color: $title;
+            font-weight: 600;
+            padding: 6px 59px;
+            cursor: pointer;
+        }
+    }
+}
+.contact-slider{
+    padding-bottom: 102px;
+    &__link{
+        position: relative;
+        margin-bottom: 20px;
+        &:hover{
+            .contact-slider__title{
+                opacity: 1;
+            }
+        }
+    }
+    &__img{
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+    }
+    &__title{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(#fff,.6);
+        color: $title;
+        @extend %title-font;
+        line-height: 22px;
+        padding: 0 5px;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
     }
 }
