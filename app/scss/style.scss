@@ -18,12 +18,10 @@
         cursor: pointer;
     }
 }
-
 .logo{
     margin: 0 auto;
     position: relative;
 }
-
 .logo::after{
     background-image: url(../images/logo.png);
     width: 97px;
@@ -33,7 +31,6 @@
     top: 1px;
     right: 1px;
 }
-
 .menu{
     padding-right: 15px;
     &__list{
@@ -63,7 +60,6 @@
         }
     }
 }
-
 .footer{
     &__content{
         background-color: #dfdfdf;
@@ -177,7 +173,6 @@
         height: 12px;
     }
 }
-
 .rightside-menu{
     position: absolute;
     right: 0;
@@ -240,7 +235,6 @@
         margin: 0 auto;
     }
 }
-
 .breadcrumbs{
     background: rgba(#dfdfdf, .5);
     padding: 13px 14px;
@@ -262,7 +256,6 @@
         color: $default;
     }
 }
-
 .top{
     &__inner{
         padding-bottom: 70px;
@@ -315,7 +308,6 @@
         max-width: 515px;
     }
 }
-
 .new-collection{
 	text-align: center;
 	padding: 45px 0 35px;
@@ -344,7 +336,6 @@
 		margin: 0 auto 30px;
 	}
 }
-
 .collection{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -405,7 +396,6 @@
 		color: #707070;
 	}
 }
-
 .decore{
 	padding: 170px 0 155px;
 	background-image: url(../images/decor-bg.jpg);
@@ -435,7 +425,6 @@
 		max-width: 600px;
 	}
 }
-
 .works-path{
 	padding: 80px 0 30px;
 	&__title{
@@ -509,7 +498,6 @@
         margin-top: 13px;
     }
 }
-
 .gallery{
     padding: 80px 0 90px;
     &__buttons{
@@ -559,7 +547,6 @@
         }
     }
 }
-
 .blog-box{
     padding-bottom: 100px;
     &__title{
@@ -599,7 +586,6 @@
         @extend %title-font;
     }
 }
-
 .about{
     &__prev{
         background-image: url(../images/about-bg.jpg);
@@ -654,7 +640,6 @@
         align-items: center;
     }
 }
-
 .inspiration{
     padding-top: 100px;
     position: relative;
@@ -722,7 +707,6 @@
         margin-top: -2px;
     }
 }
-
 .partners{
     padding: 16px 0 60px;
     &__items{
@@ -733,12 +717,10 @@
         margin: 0 auto;
     }
 }
-
 .map{
     margin-top: -53px;
     margin-bottom: 50px;
 }
-
 .contact{
     padding-bottom: 100px;
     &__title{
@@ -861,7 +843,6 @@
         transition: all .5s;
     }
 }
-
 .blog{
     padding: 60px 0 100px;
     &__inner{
