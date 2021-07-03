@@ -904,6 +904,71 @@
     &__social-item{
         margin-right: 20px;
     }
+    &__items{
+        max-width: 730px;
+    }
+    &__item{
+        margin-bottom: 80px;
+    }
+    &__item-img{
+        max-width: 730px;
+    }
+    &__item-info{
+        padding: 25px 0 10px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #707070;
+        a{
+            color: inherit;
+        }
+    }
+    &__item-title{
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 6px;
+        color: $title;
+        @extend %title-font;
+    }
+    &__item-link{
+        color: inherit;
+    }
+    &__blovkquote{
+        background-color: rgba(223, 223, 223, 0.5);
+        margin-bottom: 50px;
+        padding: 54px 64px;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 38px;
+        text-align: center;
+    }
+    &__blovkquote-author{
+        font-size: 16px;
+        line-height: 22px;
+        color: $title;
+        @extend %title-font;
+        margin-top: 23px;
+        padding-top: 23px;
+        position: relative;
+        font-style: normal;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 1px;
+            width: 200px;
+            background-color: #6d7278;
+            margin: 0 auto;
+        }
+    }
+    &__item-popup{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 .aside{
     width: 350px;
@@ -956,10 +1021,55 @@
         color: #a1a1a1;
         font-size: 14px;
     }
-    &__date{
-
+}
+.article-popup{
+    &__box{
+        position: relative;
     }
-    &__author{
-
+}
+.article-slider{
+    &__arrow{
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-45%);
+        z-index: 4;
+        cursor: pointer;
+    }
+    &__arrowleft{
+        left: 16px;
+    }
+    &__arrowright{
+        right: 16px;
+    }
+    &__img{  
+        height: 425px;
+    }
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list{
+        display: flex;
+    }
+    &__list-item{
+        margin: 0 6px;
+    }
+    &__arrow{
+        margin: 0 6px;
+    }
+    &__arrow--disables{
+        display: none;
+    }
+    &__list-num{
+        font-weight: 600;
+        font-size: 14px;
+        color: #707070;
+    }
+    &__list-num--active{
+        color: $title;
     }
 }
