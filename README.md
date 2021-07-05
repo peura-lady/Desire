@@ -1,11 +1,11 @@
 # Desire
 
 A complete beautiful website, which includes 8 full pages.  <br>
-Includes plugins such as <b>Slick Slider</b> at <i>Main page</i> and <i>Contact Page</i>,  <br>
-<b>Mixitup</b> is used at <i>Main page</i> and <i>Gallery page</i> <br>
-<b>Fancybox</b> popups are available at <i>About Page</i> and <i>Blog page</i>.  <br>
+Includes plugins such as <b>Slick Slider</b> on <i>Main page</i> and <i>Contact Page</i>,  <br>
+<b>Mixitup</b> is used on <i>Main page</i> and <i>Gallery page</i> <br>
+<b>Fancybox</b> popups are available on <i>About Page</i> and <i>Blog page</i>.  <br>
 
-Gulpfile.js was used to write this website. Only desctop version is available at the moment. <br>
+Gulpfile.js was used to write this website. Only desktop version is available at the moment. <br>
 
 https://peura-lady.github.io/Desire/app/
 
